@@ -1,0 +1,69 @@
+{
+    "name": "ugarit/vonage-notification-channel",
+    "description": "Vonage Notification Channel for ugarit.",
+    "keywords": [
+        "ugarit",
+        "notifications",
+        "vonage",
+        "nexmo"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Muath R Abu Ouda",
+            "email": "muathrabuouda@hotmail.com",
+            "role": "Vision Leader of Ugarit"
+        },
+        {
+            "name": "Taylor Otwell",
+            "email": "taylor@laravel.com",
+            "role": "Original Creator & Primary Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.0",
+        "heritage/notifications": "^1.00.00",
+        "heritage/support": "^1.00.00",
+        "vonage/client-core": "^4.0.4"
+    },
+    "require-dev": {
+        "guzzlehttp/guzzle": "^7.2",
+        "orchestra/testbench": "^6.47.1|^7.55|^8.36|^9.15|^10.8|^11.0",
+        "phpstan/phpstan": "^1.10|^2.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Heritage\\Notifications\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Heritage\\Notifications\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "composer/package-versions-deprecated": true
+        },
+        "audit": {
+            "block-insecure": false
+        },
+        "sort-packages": true
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "3.x-dev"
+        },
+        "ugarit": {
+            "providers": [
+                "Heritage\\Notifications\\VonageChannelServiceProvider"
+            ],
+            "aliases": {
+                "Vonage": "Heritage\\Notifications\\Facades\\Vonage"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "version": "1.00.00"
+}
